@@ -24,30 +24,27 @@ output:1
 ```
 So, in this case, I can't meet all the expected outputs in 10 minutes. So, after the test finished, I tried to finish this coding test and it took me 50 minutes to complete. So, in this case, I'm 5 times slower to think of a proper way to solve this problem.
 
-This is the last code I made
+This is the final code I made
 ```
-inp = "aabbcc"
-# inp = "abca"
 def isRepeating(inputs):
     z = list(inputs)
     z_dict = {}
     for el in range(len(z)):
         z_dict[el]=-1
-    print(z_dict)
+    # print(z_dict)
     for i in range(len(z)-1):
         key = z[i]
         for j in range(i+1,len(z)):
             pair = z[j]
             if key == pair:
-                print("sama")
+                # print("sama")
                 z_dict[i] = 1
                 z_dict[j] = 1  
-    print(z_dict)       
+    # print(z_dict)       
     for key, value in z_dict.items():
         if value == -1:
             return key 
     return -1
-print(isRepeating(inp))
 ```
 ### Code Explanation
 In the above code, I used a list and dictionary data structure. The dictionary will store the list index and character state, because characters are represented by the list value index.
@@ -58,3 +55,12 @@ Secondly, for the first iteration, I iterate over the list up to index "length o
 
 Thirdly, I compared the "key" and "pair" variables. If the keys are the same as the pair, then the dictionary that has the keys i and j will be assigned a value of 1. This state 1 indicates that the characters in both positions are the same.
 Finally, I checked the dictionary value. If any key has a value of -1, then the function will return the dictionary key. Otherwise, the function will return -1 indicating all characters in the repeated string.
+
+## How to Run it:
+**Using VsCode**
+Just run it and input the string on the terminal
+
+**Using command prompt/terminal**
+```
+python (*.py path)
+```
